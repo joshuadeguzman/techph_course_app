@@ -1,8 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:simple_course_app/screens/detail/widgets/buy_now_modal.dart';
 import 'package:simple_course_app/screens/detail/widgets/course_content.dart';
 import 'package:simple_course_app/screens/home/widgets/course_category.dart';
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _DetailScreenState();
+  }
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void _showModal() {
+    showModalBottomSheet(
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: (_) {
+        return BuyNowModal();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -26,13 +49,13 @@ class DetailScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 12),
             child: IconButton(
-              icon: SizedBox(
-                height: 24,
-                width: 24,
-                child: Image.asset("assets/images/more.png"),
+              icon: Icon(
+                Icons.shopping_cart,
+                size: 24,
+                color: Color(0xFF61688B),
               ),
               onPressed: () {
-                debugPrint("more is pressed");
+                _showModal();
               },
             ),
           ),
@@ -187,8 +210,8 @@ class DetailScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(32),
-                      topRight: Radius.circular(32),
+                      topLeft: Radius.circular(48),
+                      topRight: Radius.circular(48),
                     ),
                   ),
                   child: Column(
