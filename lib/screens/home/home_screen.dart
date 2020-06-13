@@ -95,6 +95,30 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(top: 32),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      "Categories",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF0D1333),
+                      ),
+                    ),
+                    Text(
+                      "See All",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF6E8AFA),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
