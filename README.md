@@ -1,16 +1,44 @@
 # simple_course_app
 
-A new Flutter project.
+## Demo
 
-## Getting Started
+![demo](images/demo.gif)
 
-This project is a starting point for a Flutter application.
+## Setup
 
-A few resources to get you started if this is your first Flutter project:
+Clone the repo
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
+$ git clone https://github.com/joshuadeguzman/techph_course_app
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Install dependencies
+
+```
+$ flutter packages get
+```
+
+Run the app
+
+```
+$ flutter run -v
+```
+
+
+## Contact
+
+### Let's connect
+
+- Twitter [@joshuamdeguzman](https://twitter.com/joshuadeguzman)
+- Keybase [@joshuadeguzman](https://keybase.io/joshuadeguzman)
+
+### If this helped you, please don't forget to show some 💙
+
+[⭐](https://github.com/joshuadeguzman/flutter-examples/stargazers) this repo or follow me on:
+
+- Github [@joshuadeguzman](https://github.com/joshuadeguzman)
+- Medium [@joshua.deguzman](https://medium.com/@joshua.deguzman)
+
+## License
+
+[BSD](LICENSE.md) @joshuadeguzman
