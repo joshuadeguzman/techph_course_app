@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simple_course_app/screens/detail/widgets/course_content.dart';
+import 'package:simple_course_app/screens/home/widgets/course_category.dart';
 
 class DetailScreen extends StatelessWidget {
   @override
@@ -37,69 +39,95 @@ class DetailScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  height: size.height * 0.60,
-                  width: size.width,
-                  child: Image.asset(
-                    "assets/images/design_thinking.png",
-                    fit: BoxFit.fitWidth,
-                  ),
+        child: Container(
+          height: size.height,
+          child: Stack(
+            children: [
+              Container(
+                height: size.height * 0.60,
+                width: size.width,
+                child: Image.asset(
+                  "assets/images/design_thinking.png",
+                  fit: BoxFit.fitWidth,
                 ),
-                Positioned(
-                  top: 24,
-                  left: 24,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Stack(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 100,
-                            child: Image.asset(
-                              "assets/images/best_seller_ribbon.png",
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              left: 8,
-                              top: 8,
-                            ),
-                            child: Text(
-                              "BESTSELLER",
-                              style: TextStyle(
-                                color: Color(0xFF0D1333),
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12),
-                        child: Text(
-                          "Design Thinking",
-                          style: TextStyle(
-                            color: Color(0xFF0D1333),
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
+              ),
+              Positioned(
+                top: 24,
+                left: 24,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        SizedBox(
+                          width: 100,
+                          child: Image.asset(
+                            "assets/images/best_seller_ribbon.png",
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 8,
+                            top: 8,
+                          ),
+                          child: Text(
+                            "BESTSELLER",
+                            style: TextStyle(
+                              color: Color(0xFF0D1333),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: Text(
+                        "Design Thinking",
+                        style: TextStyle(
+                          color: Color(0xFF0D1333),
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 12),
-                        child: Row(
-                          children: <Widget>[
-                            Row(
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: Row(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 20,
+                                child: Image.asset(
+                                  "assets/images/people.png",
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 4,
+                                  top: 4,
+                                ),
+                                child: Text(
+                                  "18k",
+                                  style: TextStyle(
+                                    color: Color(0xFF61688B),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 24),
+                            child: Row(
                               children: <Widget>[
                                 SizedBox(
                                   width: 20,
                                   child: Image.asset(
-                                    "assets/images/people.png",
+                                    "assets/images/star.png",
                                   ),
                                 ),
                                 Padding(
@@ -108,7 +136,7 @@ class DetailScreen extends StatelessWidget {
                                     top: 4,
                                   ),
                                   child: Text(
-                                    "18k",
+                                    "4.8",
                                     style: TextStyle(
                                       color: Color(0xFF61688B),
                                       fontSize: 16,
@@ -118,69 +146,83 @@ class DetailScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 24),
-                              child: Row(
-                                children: <Widget>[
-                                  SizedBox(
-                                    width: 20,
-                                    child: Image.asset(
-                                      "assets/images/star.png",
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      left: 4,
-                                      top: 4,
-                                    ),
-                                    child: Text(
-                                      "4.8",
-                                      style: TextStyle(
-                                        color: Color(0xFF61688B),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 32),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              "\$50",
-                              style: TextStyle(
-                                color: Color(0xFF0D1333),
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                              ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 32),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "\$50",
+                            style: TextStyle(
+                              color: Color(0xFF0D1333),
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 12),
-                              child: Text(
-                                "\$70",
-                                style: TextStyle(
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12),
+                            child: Text(
+                              "\$70",
+                              style: TextStyle(
                                   color: Color(0xFFA0A5BD),
                                   fontSize: 16,
-                                  decoration: TextDecoration.lineThrough
-                                ),
-                              ),
+                                  decoration: TextDecoration.lineThrough),
                             ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  height: 350,
+                  width: size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(32),
+                      topRight: Radius.circular(32),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 32,
+                          left: 24,
+                        ),
+                        child: Text(
+                          "Categories",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF0D1333),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: ListView(
+                          children: <Widget>[
+                            CourseContent(),
+                            CourseContent(),
+                            CourseContent(),
                           ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
