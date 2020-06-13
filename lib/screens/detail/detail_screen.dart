@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_course_app/screens/detail/widgets/buy_now_modal.dart';
 import 'package:simple_course_app/screens/detail/widgets/course_content.dart';
-import 'package:simple_course_app/screens/home/widgets/course_category.dart';
 
 class DetailScreen extends StatefulWidget {
   @override
@@ -42,6 +41,8 @@ class _DetailScreenState extends State<DetailScreen> {
           ),
           onPressed: () {
             debugPrint("back is pressed");
+
+            Navigator.pop(context);
           },
         ),
         elevation: 0,

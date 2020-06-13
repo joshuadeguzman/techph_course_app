@@ -20,6 +20,9 @@ class BuyNowModal extends StatelessWidget {
           InkWell(
             onTap: () {
               debugPrint("cart tap");
+
+              // TODO: Add a widget parameter callback here
+              Navigator.pop(context);
             },
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -42,6 +45,9 @@ class BuyNowModal extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 debugPrint("buy now tap");
+
+                // TODO: Add a widget parameter callback here
+                Navigator.pop(context);
               },
               child: Container(
                 padding: const EdgeInsets.symmetric(

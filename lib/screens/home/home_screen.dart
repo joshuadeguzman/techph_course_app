@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_course_app/screens/detail/detail_screen.dart';
 import 'package:simple_course_app/screens/home/widgets/course_category.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -135,10 +136,21 @@ class HomeScreen extends StatelessWidget {
                         title: "Marketing",
                         numberOfCourses: 17,
                       ),
-                      CourseCategory(
-                        imagePath: "assets/images/ux.png",
-                        title: "UX Design",
-                        numberOfCourses: 25,
+                      // TODO: Add the onTap callback to the widget
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailScreen(),
+                            ),
+                          );
+                        },
+                        child: CourseCategory(
+                          imagePath: "assets/images/ux.png",
+                          title: "UX Design",
+                          numberOfCourses: 25,
+                        ),
                       ),
                       CourseCategory(
                         imagePath: "assets/images/photography.png",
