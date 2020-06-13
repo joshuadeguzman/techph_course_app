@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_course_app/screens/detail/detail_screen.dart';
 import 'package:simple_course_app/screens/home/home_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: "Avenir",
       ),
-      home: HomeScreen(),
+      home: DetailScreen(),
     );
   }
 }
