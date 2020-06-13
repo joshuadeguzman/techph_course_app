@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: "Avenir",
       ),
-      home: DetailScreen(),
+      home: Center(
+        child: Center(
+          child: Text("Welcome!"),
+        ),
+      ),
     );
   }
 }

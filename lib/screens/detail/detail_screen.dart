@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_course_app/screens/detail/widgets/course_content.dart';
-import 'package:simple_course_app/screens/home/widgets/course_category.dart';
 
 class DetailScreen extends StatelessWidget {
   @override

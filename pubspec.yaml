@@ -48,10 +48,7 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-  assets:
-    - assets/images/
-    - assets/fonts/
-
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -77,11 +74,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  fonts:
-    - family: Avenir
-      fonts:
-           - asset: assets/fonts/bold.otf
-             weight: 700
-           - asset: assets/fonts/light.otf
-             weight: 200
-           - asset: assets/fonts/normal.otf
